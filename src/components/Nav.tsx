@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import React from 'react';
-import Icon from './icon';
+import Icon from './Icon';
 
 
 const NavWrapper = styled.div`
-  border: 1px solid blue;
   >ul{
     display: flex;
     >li{
