@@ -2,54 +2,6 @@ import Layout from '../components/Layout';
 import React from 'react';
 import styled from 'styled-components';
 
-const TagsSection = styled.section`
-  background: #ffffff;
-  padding: 12px 16px;
-
-  > ol {
-    > li {
-      background: #D9D9D9;
-      display: inline-block;
-      padding: 3px 18px;
-      font-size: 14px;
-      border-radius: 18px;
-      margin: 8px 12px;
-    }
-
-    > button {
-      background: none;
-      border: none;
-      border-bottom: 1px solid #333;
-      color: #666;
-      margin-top: 8px;
-      padding: 2px 4px;
-    }
-  }
-
-`;
-const NotesSection = styled.section`
-  background: #f5f5f5;
-  padding: 0 16px;
-  font-size: 14px;
-
-  > label {
-    display: flex;
-    align-items: center;
-
-    > span {
-      margin-right: 16px;
-      white-space: nowrap;
-    }
-
-    > input {
-      display: block;
-      width: 100%;
-      height: 72px;
-      background: none;
-      border: none;
-    }
-  }
-`;
 const CategorySection = styled.section`
   font-size: 24px;
 
@@ -76,6 +28,54 @@ const CategorySection = styled.section`
     }
   }
 `;
+const TagsSection = styled.section`
+  background: #ffffff;
+  padding: 12px 16px;
+  flex-grow: 1;display: flex;flex-direction: column;
+  justify-content: flex-end;align-items: flex-start;
+  > ol {
+    > li {
+      background: #D9D9D9;
+      display: inline-block;
+      padding: 3px 18px;
+      font-size: 14px;
+      border-radius: 18px;
+      margin: 8px 12px;
+    }
+
+    > button {
+      background: none;
+      border: none;
+      border-bottom: 1px solid #333;
+      color: #666;
+      margin-top: 8px;
+      padding: 2px 4px;
+    }
+  }
+`;
+const NotesSection = styled.section`
+  background: #f5f5f5;
+  padding: 0 16px;
+  font-size: 14px;
+
+  > label {
+    display: flex;
+    align-items: center;
+
+    > span {
+      margin-right: 16px;
+      white-space: nowrap;
+    }
+
+    > input {
+      display: block;
+      width: 100%;
+      height: 40px;
+      background: none;
+      border: none;
+    }
+  }
+`;
 const NumberPadSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -83,7 +83,7 @@ const NumberPadSection = styled.section`
     background:white;
     font-size: 36px;
     text-align: right;
-    padding: 0 16px;
+    padding: 5px 16px;
     box-shadow: inset 0 -5px 5px -5px rgba(0,0,0,0.25),
     inset 0 5px 5px -5px rgba(0,0,0,0.25);
   }
@@ -128,10 +128,14 @@ const NumberPadSection = styled.section`
     }
   }
 `;
+const MyLayout = styled(Layout)`
+  display: flex;
+  flex-direction: column;
+`
 
 function Money() {
   return (
-    <Layout>
+    <MyLayout>
       <CategorySection>
         <ul>
           <li className="selected">支出</li>
@@ -174,7 +178,7 @@ function Money() {
           <button className="dot">.</button>
         </div>
       </NumberPadSection>
-    </Layout>
+    </MyLayout>
   );
 }
 
