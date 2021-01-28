@@ -32,15 +32,15 @@ const Wrapper = styled.section`
       margin-top: 8px;
       padding: 2px 4px;
     }
-  
 `;
 const TagsSection: React.FC = (props) => {
   const [tags, setTags] = useState<string[]>(['衣', '食', '住', '行']);
   const [selectedTags,setSelectedTags] = useState<string[]>([]);
   const onAddTag = ()=>{
     const tagName = window.prompt('新标签的名称为')
-    if (tagName!==null){
+    if (tagName!==null&&tagName!==''){
       setTags([...tags,tagName])
+      console.log(typeof tagName);
     }
   }
   const onToggleTag = (tag:string)=>{

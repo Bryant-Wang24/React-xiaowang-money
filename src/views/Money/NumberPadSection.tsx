@@ -16,10 +16,10 @@ const NumberPadSection = styled.section`
       font-size: 18px;
       float: left;
       width: 25%;
-      height: 64px;
+      height: 62px;
       border: none;
       &.ok{
-        height: 128px;
+        height: 124px;
         float: right;
       }
       &.zero{width: 50%;}

@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 import React from 'react';
 import styled from 'styled-components';
 import {CategorySection} from './Money/CategorySection';
-import {NotesSection} from './Money/NotesSection';
+import {NoteSection} from './Money/NoteSection';
 import {NumberPadSection} from './Money/NumberPadSection';
 import {TagsSection} from './Money/TagsSection';
 
@@ -26,12 +26,8 @@ function Money() {
       </CategorySection>
       <TagsSection>
       </TagsSection>
-      <NotesSection>
-        <label>
-          <span>备注</span>
-          <input placeholder="在这里添加备注"/>
-        </label>
-      </NotesSection>
+      <NoteSection>
+      </NoteSection>
       <NumberPadSection>
         <div className="output">
           100
