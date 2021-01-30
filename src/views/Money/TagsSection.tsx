@@ -15,7 +15,7 @@ const Wrapper = styled.section`
     > li {
       background: #D9D9D9;
       display: inline-block;
-      padding: 3px 18px;
+      padding: 3px 16px;
       font-size: 14px;
       border-radius: 18px;
       margin: 8px 12px;
