@@ -13,30 +13,36 @@ const MyLayout = styled(Layout)`
 `;
 
 type Category = '-' | '+'
-const defaultFormDate = {
+
+const defaultFormData = {
   tagIds:[] as number[],
   note:'',
   category:'-' as Category,
   amount:0
 }
+const CategoryWrapper = styled.div`
+    background:#c4c4c4;
+`;
 
 function Money() {
-  const [selected,setSelected] = useState(defaultFormDate)
-  const {records,addRecord} = useRecords()
+  const [selected,setSelected] = useState(defaultFormData)
+  const {addRecord} = useRecords()
   const onChange = (obj:Partial<typeof selected>)=>{
     setSelected({...selected,...obj})
   }
-  const submit = ()=>{
-    if (addRecord(selected)){
-      alert('保存成功')
-      setSelected(defaultFormDate)
+  const submit = () => {
+    if (addRecord(selected)) {
+      alert('保存成功');
+      setSelected(defaultFormData);
     }
-  }
+  };
+
   return (
     <MyLayout>
-      <CategorySection value={selected.category}
-                       onChange={category =>onChange({category})}
-      />
+      <CategoryWrapper>
+        <CategorySection value={selected.category}
+                         onChange={category => onChange({category})}/>
+      </CategoryWrapper>
       <TagsSection value={selected.tagIds}
                    onChange={tagIds =>onChange({tagIds})}
       />
