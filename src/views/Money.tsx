@@ -38,7 +38,7 @@ function Money() {
   };
 
   return (
-    <MyLayout scrollTop={9999}>
+    <MyLayout>
       <CategoryWrapper>
         <CategorySection value={selected.category}
                          onChange={category => onChange({category})}/>
