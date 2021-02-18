@@ -19,7 +19,7 @@ const Wrapper = styled.section`
       border-radius: 18px;
       margin: 8px 12px;
       &.selected {
-        background: #f60;
+        background:#feda46;
       }
     }
   }

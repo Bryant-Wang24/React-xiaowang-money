@@ -7,7 +7,7 @@ import {CategorySection} from './Money/CategorySection';
 import day from 'dayjs'
 
 const CategoryWrapper = styled.div`
-  background:white;
+  background:#feda46;
 `;
 
 const Item = styled.div`

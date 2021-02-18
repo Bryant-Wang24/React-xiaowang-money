@@ -6,6 +6,7 @@ import {NoteSection} from './Money/NoteSection';
 import {NumberPadSection} from './Money/NumberPadSection';
 import {TagsSection} from './Money/TagsSection';
 import {useRecords} from '../hooks/useRecords';
+import { generateOutput } from './Money/NumberPadSection/generateOutput';
 
 const MyLayout = styled(Layout)`
   display: flex;
@@ -21,7 +22,7 @@ const defaultFormData = {
   amount:0
 }
 const CategoryWrapper = styled.div`
-    background:#c4c4c4;
+    background:#feda46;
 `;
 
 function Money() {
@@ -33,6 +34,7 @@ function Money() {
   const submit = () => {
     if (addRecord(selected)) {
       alert('保存成功');
+      generateOutput('','0')
       setSelected(defaultFormData);
     }
   };
