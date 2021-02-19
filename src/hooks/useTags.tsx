@@ -13,7 +13,9 @@ const useTags = () => {
         {id:createId(),name:'住房'},
         {id:createId(),name:'交通'},
         {id:createId(),name:'医疗'},
-        {id:createId(),name:'娱乐'}
+        {id:createId(),name:'购物'},
+        {id:createId(),name:'娱乐'},
+        {id:createId(),name:'教育'},
       ];
     }
     setTags(localTags);

@@ -53,3 +53,7 @@ button,input{
   overflow: hidden;
   text-overflow: ellipsis;
 }
+#root {
+  max-width: 500px;
+  margin: 0 auto;
+}
